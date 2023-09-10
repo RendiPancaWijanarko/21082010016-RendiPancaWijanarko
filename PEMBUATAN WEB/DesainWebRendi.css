@@ -18,15 +18,30 @@ body{
 	background-size: cover;
 	background-position: center;
 }
-.container{
-	padding: 10px 3%;
+
+.container {
+    padding: 10px 3% 10px 3%;
+    padding-top: 40px;
 }
+
 nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: background-color 0.3s;
+    padding: 10px 30px;
+}
+
 .logorendi{
 	width: 170px;
 }
@@ -142,9 +157,9 @@ nav ul li a:hover::after{
 	background-color: #666;
   }
 
-  /* Course Schedule */
-#Course Schedule{
-	padding: 50px 0;
+/* Film Favorite */
+#FilmFavorite{
+	padding: 20px 0;
 }
   .sub-titleCS{
 	font-size: 50px;
@@ -153,6 +168,52 @@ nav ul li a:hover::after{
 	text-align: center;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  /* Film Favorite Section */
+#FilmFavorite {
+    padding: 50px 0;
+}
+
+.sub-titleFF {
+    font-size: 50px;
+	font-weight: 100%;
+	color: #EEEEEE;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.film-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.film {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    margin: 20px;
+}
+
+.film img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.film h3 {
+    font-weight: bold;
+    font-style: oblique;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.film:hover img {
+    transform: scale(1.1);
+}
 
 table {
     border-collapse: separate;
@@ -271,14 +332,14 @@ table:before {
 }
 
 /* Thanks Section*/
-.Thanks{
-	width: : 100%;
-	height: 290px;
-	background: #191919;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
+.Thanks {
+    width: 100%;
+    height: 290px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Thanks p{
@@ -347,16 +408,14 @@ footer {
   }
   
 
-/* CSS for Phone Screens */
-@media only screen and (max-width: 600px){
-	#header{
-		background-image: url(GAMBAR/Phone-Background);
-	}
-	.header-text{
-		margin-top: 100%;
-		font-size: 16px;
-	}
-	.header-text{
-		font-size: 30px;
-	}
+/* CSS for Phone Screens (Masih trial hehe)*/
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(GAMBAR/Phone-Background);
+        height: 70vh;
+    }
+    .header-text {
+        margin-top: 30%;
+        font-size: 16px;
+    }
 }
